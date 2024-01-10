@@ -1,4 +1,4 @@
 using Internal;
 
 Console.WriteLine("Hello World");
-Consle.ReadLine();
+Console.ReadLine();
