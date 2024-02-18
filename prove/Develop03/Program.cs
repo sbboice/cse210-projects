@@ -4,23 +4,60 @@ class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Hello Develop03 World!");
+        Console.Clear();
 
-        /*
-        Program process:
-        1. Random reference is chosen (Reference.cs)
-        2. Reference is passed to Scripture.cs to choose the scripture text
-        of the given reference (Reference is dict key, scripture is dict value)
-        3. Scripture is displayed
-        4. User input is taken
-            a. If enter key is selected, ReplaceWords process begins
-            b. If "quit" is typed, program is ended
-        5. ReplaceWords process begins
-            a. Scripture string is passed to ReplaceWords()
-            b. ReplaceWords() splits the string into individual words
-            c. ReplacementScript is displayed
-        6. Loop continues until program breaks
-            a. Replace.Replace() replaces 
-        */
+        //Instantiates new Reference class
+        Reference r = new Reference();
+
+        //Gets a scripture reference from the RandomReference() method
+        string reference = r.RandomReference();
+
+        //Instantiates new Scripture class
+        Scripture script = new Scripture();
+
+        //Gets a scripture verse from ChooseScripture class, passing in reference as a argument
+        string scripture = script.ChooseScripture(reference);
+
+        //Instantiates a new ReplaceWords class
+        ReplaceWords replace = new ReplaceWords(scripture);
+
+        //Prints the reference and full scripture
+        Console.WriteLine(reference + ": " + scripture);
+        
+        //Main loop for memorization process
+        while (true)
+        {
+            Console.WriteLine("Press enter to continue or type 'Quit' to exit");
+            string input = Console.ReadLine();
+
+            //If enter key is pressed (empty input)
+            if (input == "")
+            {
+                Console.Clear();
+
+                //Calls the Replace() method of the ReplaceWords() class
+                string newScripture = replace.Replace();
+
+                //Prints the scripture reference, and the new hidden verse
+                Console.WriteLine(reference + ": " + newScripture);
+            }
+
+
+            //If "quit" is typed
+            else if (input == "quit" || input == "Quit")
+            {
+                Console.Clear();
+
+                //Displays a quit message, ends the program
+                Console.WriteLine("Quitting Program");
+                break;
+            }
+
+            //In case of invalid input
+            else
+            {
+                Console.WriteLine("Please select a valid option");
+            }
+        }
     }
 }
