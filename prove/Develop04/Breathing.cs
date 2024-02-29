@@ -5,6 +5,7 @@ class Breathing : Activity
     public Breathing()
     {
         PrintStartMessage();
+        Console.WriteLine();
         Console.WriteLine("Please enter a duration for your activity:");
         string input = Console.ReadLine();
         _duration = int.Parse(input);
@@ -24,7 +25,7 @@ class Breathing : Activity
             Countdown(5, "Breathe out..." );
             Countdown(3, "Hold...");
             
-            timeElapsed += 12000;
+            timeElapsed += 18000;
         }
 
         Console.Clear();

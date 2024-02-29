@@ -31,7 +31,9 @@ class Program
 
             else if (input == "3")
             {
-                
+                Console.Clear();
+                Listing l = new Listing();
+                l.Play();
             }
 
             else if (input == "4")
