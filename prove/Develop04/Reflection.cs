@@ -17,6 +17,8 @@ class Reflection : Activity
         PrintStartMessage();
         Console.WriteLine(_instructions);
         Console.WriteLine();
+
+        //Gets duration value from user
         Console.WriteLine("Please enter a duration for your activity:");
         string input = Console.ReadLine();
         _duration = int.Parse(input);

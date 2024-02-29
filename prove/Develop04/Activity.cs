@@ -49,6 +49,7 @@ class Activity
 
             Thread.Sleep(300);
 
+            //Adds above elapsed time to current time value
             currentTime = currentTime.AddMilliseconds(1200);
         }
     }
@@ -66,16 +67,19 @@ class Activity
             Console.WriteLine(message);
             Console.WriteLine(duration);
             
+            //Handles double digit values
             if (i < 10)
             {
                 Console.Write("\b \b");
             }
 
+            //Handles triple digit values in case someone ever decides to use a triple digit duration for some reason
             else if (i >= 10 && i < 100)
             {
                 Console.Write("\b\b  \b\b");
             }
 
+            //Delays for 1 second
             Thread.Sleep(1000);
 
             i -= 1;

@@ -6,8 +6,10 @@ class Program
     {
         string input = "1";
 
+        //Main loop
         while (input != "4")
         {
+            //Displays menu options
             Console.Clear();
             Console.WriteLine("Welcome to the Mindfulness Exercise Program.");
             Console.WriteLine("Please select an activity below:");
@@ -15,8 +17,11 @@ class Program
             Console.WriteLine("2. Reflection Exercise");
             Console.WriteLine("3. Listing Exercise");
             Console.WriteLine("4. Quit Program");
+
+            //Collects input
             input = Console.ReadLine();
 
+            //Runs Breathing activity
             if (input == "1")
             {
                 Console.Clear();
@@ -24,11 +29,13 @@ class Program
                 b.Play();
             }
 
+            //Runs Reflection activity
             else if (input == "2")
             {
                 
             }
 
+            //Runs Listing Activity
             else if (input == "3")
             {
                 Console.Clear();
@@ -36,6 +43,7 @@ class Program
                 l.Play();
             }
 
+            //Obliterates program
             else if (input == "4")
             {
                 Console.Clear();

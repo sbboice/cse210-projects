@@ -16,10 +16,13 @@ class Listing : Activity
         PrintStartMessage();
         Console.WriteLine(_instructions);
         Console.WriteLine();
+
+        //Gets duration value from user
         Console.WriteLine("Please enter a duration for your activity:");
         string input = Console.ReadLine();
         _duration = int.Parse(input);
 
+        //Chooses a random prompt to display
         Random r = new Random();
         int index = r.Next(0, _prompts.Count - 1);
         _prompt = _prompts[index];
@@ -33,9 +36,11 @@ class Listing : Activity
 
         int entries = 0;
 
+        //Determines when in the future the game should end
         DateTime startTime = DateTime.Now;
         DateTime futureTime = startTime.AddSeconds(_duration);
 
+        //Runs loop while future time has not arrived
         DateTime currentTime = DateTime.Now;
         while (currentTime <= futureTime)
         {
@@ -48,6 +53,7 @@ class Listing : Activity
             currentTime = DateTime.Now;
         }
 
+        //End message
         Console.Clear();
         Console.WriteLine("You logged " + entries + " entries in " + _duration + " seconds. Good job!");
         PrintEndMessage();
