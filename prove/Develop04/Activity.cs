@@ -19,11 +19,11 @@ class Activity
         Console.WriteLine(_endMessage);
     }
 
-    public void LoadingSpinner()
+    public void LoadingSpinner(int duration = 5)
     {
         //Gets current time and adds 5 seconds for comparison
         DateTime startTime = DateTime.Now;
-        DateTime futureTime = startTime.AddSeconds(5);
+        DateTime futureTime = startTime.AddSeconds(duration);
 
         //Gets current time again, for comparison
         DateTime currentTime = DateTime.Now;

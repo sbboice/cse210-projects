@@ -32,7 +32,9 @@ class Program
             //Runs Reflection activity
             else if (input == "2")
             {
-                
+                Console.Clear();
+                Reflection r = new Reflection();
+                r.Play();
             }
 
             //Runs Listing Activity
