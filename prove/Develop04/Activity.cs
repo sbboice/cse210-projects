@@ -29,13 +29,13 @@ class Activity
         DateTime currentTime = DateTime.Now;
         while (currentTime <= futureTime)
         {
-            Console.Write("\b\b \b");
-            Console.Write("=");
+            Console.Write("\b\b  \b\b");
+            Console.Write("==");
 
             Thread.Sleep(300);
 
-            Console.Write("\b \b");
-            Console.Write("\\");
+            Console.Write("\b\b  \b\b");
+            Console.Write("\\\\");
 
             Thread.Sleep(300);
 
