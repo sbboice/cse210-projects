@@ -35,6 +35,7 @@ class Activity
             Thread.Sleep(300);
 
             Console.Write("\b\b  \b\b");
+            //Uses four backslashes to print 2; \\ in a string will print \, since \ is usually used for breakout sequences
             Console.Write("\\\\");
 
             Thread.Sleep(300);
