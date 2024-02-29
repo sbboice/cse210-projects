@@ -1,4 +1,9 @@
 class Listing : Activity
 {
-    private string instructions = "";
+    private string _instructions = "";
+
+    public Listing()
+    {
+        
+    }
 }
