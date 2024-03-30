@@ -5,12 +5,19 @@ class Product
     private string _price = "";
     private string _quantity = "";
 
-    public Product(string name, string ID, string price, string qty)
+    public Product()
     {
-        _name = name;
-        _ID = ID;
-        _price = price;
-        _quantity = qty;
+        Console.WriteLine("Product Name: ");
+        _name = Console.ReadLine();
+
+        Console.WriteLine("Product ID: ");
+        _ID = Console.ReadLine();
+
+        Console.WriteLine("Price: ");
+        _price = Console.ReadLine();
+
+        Console.WriteLine("Quantity: ");
+        _quantity = Console.ReadLine();
     }
 
     public List<string> GetProductInfo()
